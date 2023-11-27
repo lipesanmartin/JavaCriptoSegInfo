@@ -1,5 +1,6 @@
 package dao;
 
+import connections.ConnectionFactory;
 import entities.Medico;
 
 import java.sql.Connection;
@@ -9,7 +10,7 @@ public class MedicoDao {
     private final Connection con;
 
     public MedicoDao(Connection con) {
-        this.con = con;
+        this.con = ConnectionFactory.getConnection();
     }
 
     public void adiciona(Medico medico) {

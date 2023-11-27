@@ -1,8 +1,8 @@
 CREATE
-DATABASE `seg_info` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+    DATABASE `seg_info` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION = 'N' */;
 
 use
-seg_info;
+    seg_info;
 
 CREATE TABLE `medicos`
 (
@@ -14,7 +14,9 @@ CREATE TABLE `medicos`
     `senha_hash`    varchar(255) NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `login_UNIQUE` (`login`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_0900_ai_ci;
 
 CREATE TABLE `pacientes`
 (
@@ -25,14 +27,18 @@ CREATE TABLE `pacientes`
     `senha_hash` varchar(255) NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `login_UNIQUE` (`login`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_0900_ai_ci;
 
 CREATE TABLE `senhas`
 (
     `id`            int          NOT NULL,
     `chave_secreta` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_0900_ai_ci;
 
 CREATE TABLE `valorespadroes`
 (
@@ -42,14 +48,18 @@ CREATE TABLE `valorespadroes`
     `limite_inferior` int         NOT NULL,
     `unidade`         varchar(50) NOT NULL,
     PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_0900_ai_ci;
 
 CREATE TABLE `vitamina_d`
 (
     `id`    int          NOT NULL,
     `ng_mL` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_0900_ai_ci;
 
 INSERT INTO `seg_info`.`valorespadroes`
 (`id`,
