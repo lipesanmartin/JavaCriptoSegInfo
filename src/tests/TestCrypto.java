@@ -5,8 +5,8 @@ import utils.CryptoUtil;
 public class TestCrypto {
     public static void main(String[] args) throws Exception {
 //        String key = CryptoUtil.generateKey();
-        String key = "daushduahfuhddgufhaoghaoudhfouahgouhafouhgaouhdofuhaohsdauhsudhausd";
-        String senha = "laikaboss";
+        String key = "daushduahfuhsudhausd";
+        String senha = "laika";
         String senhaCrypto = CryptoUtil.encrypt(senha, key);
         System.out.println("Senha: " + senha);
         System.out.println("Key: " + key);

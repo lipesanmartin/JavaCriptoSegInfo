@@ -26,14 +26,14 @@ public class Main {
         System.out.println();
 
         // prompt de cadastro de usuario
-        System.out.println("Cadastre o seu usuario:");
-        System.out.print("Digite o nome: ");
+        System.out.println("Cadastre o seu usuario.");
+        System.out.print("Nome: ");
         String nome = sc.nextLine();
-        System.out.print("Digite o cpf: ");
+        System.out.print("CPF: ");
         String cpf = sc.nextLine();
-        System.out.print("Digite o login: ");
+        System.out.print("Login: ");
         String login = sc.nextLine();
-        System.out.print("Digite a senha: ");
+        System.out.print("Senha: ");
         String senha = sc.nextLine();
         System.out.println();
 
@@ -43,7 +43,7 @@ public class Main {
         pacienteDao.adiciona(usuario);
         System.out.println("Conta criada com sucesso!");
         System.out.println();
-        System.out.println("As informações abaixo não são do interesse do usuário comum, mas você não é um " +
+        System.out.println("As informações abaixo não são do interesse do usuário comum,\nmas você não é um " +
                 "usuário comum, não é mesmo?");
         System.out.println();
 
@@ -76,8 +76,8 @@ public class Main {
         System.out.println();
 
 
-        System.out.println("Agora você pode logar no sistema para ver o resultado do seu exame. Você precisa" +
-                " informar o seu login e senha.");
+        System.out.println("Agora você pode logar no sistema para ver o resultado do seu exame. Você precisa\n" +
+                "informar o seu login e senha.");
         boolean logado = false;
         while (!logado) {
             System.out.print("Login: ");
@@ -118,6 +118,12 @@ public class Main {
         for (ValoresReferencia valor : valoresReferencia) {
             System.out.println(valor.getDescricao() + ": " + valor.getLimiteInferior() + " - " + valor.getLimiteSuperior() + " " + valor.getUnidade());
         }
+        System.out.println();
+        System.out.println("""
+                Você chegou ao final do programa! Lembre-se que o código é apenas uma demonstração e está configurado
+                para funcionar apenas uma vez. Se você quiser executar novamente testando outros logins e senhas, você
+                precisa apagar o banco de dados e utilizar o script para criá-lo novamente.""");
+
 
         sc.close();
     }
