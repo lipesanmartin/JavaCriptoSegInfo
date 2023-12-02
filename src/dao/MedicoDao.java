@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 public class MedicoDao {
     private final Connection con;
 
-    public MedicoDao(Connection con) {
+    public MedicoDao() {
         this.con = ConnectionFactory.getConnection();
     }
 
